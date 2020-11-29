@@ -14,11 +14,6 @@ databaseChangeLog:
                     primaryKey: true
                     primaryKeyName: file_id
               - column:
-                  name: name
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
                   name: data
                   type: clob
                   constraints:

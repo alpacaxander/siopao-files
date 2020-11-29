@@ -1,25 +1,6 @@
-################################################
-# Copyright 2019, Verizon Media.
-# Licensed under the Apache License, Version 2.0
-# See LICENSE file in project root for terms.
-################################################
-
-elide:
-  modelPackage: 'com.siopao.inventory.model'
-  json-api:
-    path: /api/v1
-    enabled: true
-  graphql:
-    path: /graphql/api/v1
-    enabled: true
-  swagger:
-    path: /doc
-    enabled: true
-    version: "1.0"
-
 spring:
   application:
-    name: Elide
+    name: Files
   jpa:
     properties:
       hibernate:
@@ -37,6 +18,10 @@ spring:
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
     driver-class-name: 'org.postgresql.Driver'
+  #    url: 'jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1'
+  #    username: 'sa'
+  #    password: ''
+  #    driver-class-name: 'org.h2.Driver'
   liquibase:
     change-log: 'classpath:db/changelog/db.changelog-master.yaml'
 server:
@@ -67,5 +52,3 @@ spring:
     change-log: 'classpath:db/changelog/db.changelog-master.yaml'
 server:
   port: ${PORT}
-
-
